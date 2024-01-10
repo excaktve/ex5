@@ -1,58 +1,119 @@
+
 <!DOCTYPE html>
 <html>
-	<head>
-		
-		<meta charset="utf-8" />
-		<style type="text/css">
-			html,body{
-				background-color: #FFFFFF;
-			}
-			#flex-container{
-				
-				display:flex;
-				width: 100%;
-				height: 100%;
-				justify-content: center;
-				flex-wrap: wrap;
-			}
-			.titletext{
-				font-size: 80px;
-				color:black;
-				text-align: center;
-				height: 70px;
-				
-				
-			}
-			.image{
-				width:35%;
-				
-				margin-top: 80px;
-				
-				
-				
-			}
-			.text{
-				font-size: 30px;
-				color: black;
-				flex-wrap: wrap;
-			}
-		</style>
-		<title></title>
-	</head>
-	<body>
-		<div class="titletext">
-			快船队
-		</div>
-		<div id="flex-container">
-			
-			
-				<a href="http://ttafh.gitee.io/exam" class="image" ><img src="https://ts1.cn.mm.bing.net/th/id/R-C.59002007cf924d0d12dc26df43e1ad57?rik=AX9NGpg1b5RNwA&riu=http%3a%2f%2fimg1.gtimg.com%2fsports%2fpics%2fhv1%2f75%2f183%2f1932%2f125675040.png&ehk=jPgAK%2fhwmZcg24tCAbYvohC0GpYKNIX134KD5azDxlo%3d&risl=&pid=ImgRaw&r=0" /></a>
-			<div class="text">
-				洛杉矶快船队（Los Angeles Clippers），是一支位于美国加利福尼亚州洛杉矶的职业篮球队，于1970年成立并加入美国职业篮球联赛（NBA），现为西部联盟太平洋赛区参赛球队。
-				快船队搬迁过多次，1970年初入NBA称为布法罗勇士队，1977-78赛季，勇敢者队搬到圣地亚哥，很快改名为快艇队。从1976-77赛季开始，快船队连续16个赛季未能进入季后赛。1981年球队易主，斯特林成为球队老板，在1984年将球队搬到洛杉矶。2021年6月19日历史首次闯入西部决赛。
-				快船队在2009年选中的状元秀布雷克·格里芬，成为球队未来的基石与希望。2011年休赛期随着克里斯·保罗的加盟，洛杉矶快船队正式迈入NBA联盟强队行列
-			</div>
-		</div>
-		
-	</body>
+  <head>
+    <title></title>
+    <meta charset="utf-8" />
+    <style type="text/css">
+      html,body{
+	    width:100%;
+      	height:100%;
+      	margin:0px;
+      	overflow:hidden;
+		background-image: url(https://ts1.cn.mm.bing.net/th/id/R-C.ba20c8e168e5d20f6b79c3f42fd82161?rik=ceCJ95JqZQItLA&riu=http%3a%2f%2fpic.lvmama.com%2fuploads%2fpc%2fplace2%2f2019-04-11%2f691b38b1-318e-4d8b-b5a8-b3969b87ef16.jpg&ehk=sgHBz%2fztdc9gaM%2f4CwdIFlVOWtA7B1IuIo95L4TJGAY%3d&risl=&pid=ImgRaw&r=0);
+       opacity: 2;
+	  }
+		  
+	  .zi{
+		  position: absolute;
+		  margin-top:5% ;
+		  margin-left: 50%;
+		  top:0%;
+		  color:white;
+		  font-size:20px;
+	  }
+      .image_list{
+	  margin-left: 10%;
+      	margin-top:2%;
+      }
+      .image_list img{
+	    height:200px;
+		width:300px;
+      	opacity:0.8;
+      }
+      .image_list img:hover{
+      	opacity:1;
+      }
+      #bg{
+      	position:absolute;
+      	top:0px;
+      	left:0px;
+      	
+      	background-color:#000000;
+	    width:100%;
+      	height:100%;
+      	
+      	background-repeat:no-repeat;
+      	background-position:center;
+      	background-size:80% auto;
+      	
+      	display:none;
+      }
+      .close_btn{
+	    position:absolute;
+      	top:30px;
+      	right:30px;
+      	cursor:pointer;
+      	
+      	display:none;
+      }
+	
+    </style>
+    <script type="text/javascript" src="http://www.yyfun001.com/res/jquery/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript">
+      $(function(){
+    	  $(".image_list img").click(function(){
+    		  $("#bg").css("background-image","url('"+this.src+"')");
+    		  $("#bg").css("display","block");
+    		  $(".close_btn").css("display","block");
+    	  });
+    	  
+    	  $(".close_btn").click(function(){
+    		  $("#bg").css("display","none");
+    		  $(".close_btn").css("display","none");
+    	  });
+      });
+    </script>
+  </head>
+  <body>
+	
+    <div class="zi">
+		正泰太阳能<br/>
+		连续3年在全球光伏领域综合实力排名前三，拥有中国最先进的光伏组件智能工厂，正致力成为全球领先的智慧能源解决方案提供商。<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		阿里巴巴<br/>
+		阿里巴巴网络技术有限公司是世界知名互联网企业，1999年成立于杭州，创始人为马云先生等。目前业务包括：淘宝网、天猫等，2016年阿里巴巴成为全球最大的零售交易平台。<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		海康威视<br/>
+		海康威视成立于2001年，主要进行视频监控数字化、网络化、高清智能化产品生产与配套服务。2015年市场规模全球第二、亚洲第一，产品被应用于全球150多个国家和地区。<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		白马湖生态创意城<br/>
+		2008年开始改建，现集聚了200多家文化创意、展览、影视、动漫、设计公司，承办了世界休闲产业博览会、杭州文化创意产业博览会，是中国国际动漫节永久举办地。
+	</div>
+    <!-- 图片列表 -->
+    <div class="image_list">
+      <img src="http://ywhz.hangzhou.com.cn/cxcy/images/2016-06/20/001ec94849ef190d3dd92b.jpg" title="点击查看大图" /><br/>
+      <img src="http://ywhz.hangzhou.com.cn/cxcy/images/2016-06/20/0023aea5a95c19022dc007.jpg" title="点击查看大图" /><br/>
+      <img src="http://ywhz.hangzhou.com.cn/cxcy/images/2016-06/20/001aa02787381912850a43.jpg" title="点击查看大图" /><br/>
+      <img src="http://ywhz.hangzhou.com.cn/cxcy/images/2016-06/20/0023aea5a95c190ea6170a.jpg" title="点击查看大图" /><br/>
+    </div>
+    
+    <!-- 黑色大背景 -->
+    <div id="bg"></div>
+	
+    <!-- 关闭按扭 -->
+    <img class="close_btn" src="http://www.yyfun001.com/res/jquery/images/close_btn.png" title="关闭" />
+    
+  </body>
+ 
 </html>
